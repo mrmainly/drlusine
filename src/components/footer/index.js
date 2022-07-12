@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Box, Grid, MenuItem } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import ROUTES from "../../routes";
+import { useNavigate, useLocation } from "react-router-dom";
 
+import ROUTES from "../../routes";
 import { Container, Text } from "..";
 
 const Cuslink = styled(Link)(({ theme }) => ({
@@ -56,6 +56,16 @@ const GridElem = styled(Grid)(({ theme }) => ({
 
 const Footer = () => {
     const navigate = useNavigate();
+    const params = useLocation();
+
+    const pathname = (pathname) => {
+        switch (pathname) {
+            case "/":
+                return "#F6F6F6";
+            default:
+                return "white";
+        }
+    };
 
     const data = [
         {
@@ -91,7 +101,7 @@ const Footer = () => {
         <Container
             wrapper={true}
             sx={{
-                bgcolor: "white",
+                bgcolor: `${pathname(params.pathname)}`,
                 pt: 5,
                 pb: 5,
                 mt: 16,

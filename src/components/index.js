@@ -13,6 +13,7 @@ import ThreeScreen from "./screens/ThreeScreen";
 
 import ResultsSlider from "./sliders/ResultsSlider";
 import RinoplasticCard from "./cards/RinoplasticCard";
+import ReviewSlider from "./sliders/ReviewSlider";
 
 export {
     Header,
@@ -28,4 +29,5 @@ export {
     ThreeScreen,
     ResultsSlider,
     RinoplasticCard,
+    ReviewSlider,
 };

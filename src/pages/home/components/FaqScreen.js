@@ -14,9 +14,12 @@ const Main = styled(Container)(({ theme }) => ({
     background: "white",
     marginTop: 100,
     paddingTop: 100,
-    paddingBottom: 100,
+    paddingBottom: 200,
+    marginBottom: "-200px",
     [theme.breakpoints.down("sm")]: {
         marginTop: 48,
+        paddingBottom: 150,
+        paddingTop: 70,
     },
 }));
 
@@ -61,7 +64,7 @@ const FaqScreen = () => {
     ];
 
     return (
-        <Main wrapper={true} sx={{}}>
+        <Main wrapper={true}>
             <Text sx={{ fontSize: 48, textAlign: "center" }} sm={24}>
                 Частые вопросы
             </Text>

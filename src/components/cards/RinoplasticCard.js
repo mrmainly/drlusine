@@ -44,6 +44,9 @@ const MyButton = styled(Button)(({ theme }) => ({
     left: "50%",
     transform: "translate(-50%, -50%)",
     top: 380,
+    [theme.breakpoints.down("md")]: {
+        top: 283,
+    },
 }));
 
 const RinoplasticCard = () => {
