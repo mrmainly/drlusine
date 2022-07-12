@@ -86,7 +86,11 @@ const ThreeScreen = ({ data, title, img, type }) => {
                     }}
                 >
                     <Img src={img} />
-                    <MyButton>
+                    <MyButton
+                        onClick={() =>
+                            (window.location.href = "https://t.me/DrLusineWork")
+                        }
+                    >
                         <Text
                             sx={{ fontSize: 20, fontFamily: "Manrope" }}
                             sm={14}

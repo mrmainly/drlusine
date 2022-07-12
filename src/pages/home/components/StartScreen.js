@@ -127,7 +127,14 @@ const StartBlog = () => {
                         </Box>
                         <MobileBox>
                             <MobileImg src={"/img/women.png"} />
-                            <Button>записаться</Button>
+                            <Button
+                                onClick={() =>
+                                    (window.location.href =
+                                        "https://t.me/DrLusineWork")
+                                }
+                            >
+                                записаться
+                            </Button>
                         </MobileBox>
                     </Box>
                     <Box>

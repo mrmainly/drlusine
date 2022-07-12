@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 import {
-    AppBar,
-    Toolbar,
     MenuItem,
     Box,
     Drawer,
     IconButton,
     Container,
+    Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useNavigate } from "react-router-dom";
@@ -43,7 +42,8 @@ const BoxLinks = styled(Box)(({ theme }) => ({
     display: "flex",
     [theme.breakpoints.down("lg")]: {
         flexDirection: "column",
-        justifyContent: "center",
+        alignItems: "start",
+        marginTop: 20,
     },
 }));
 const BoxLogo = styled(Box)(({ theme }) => ({
@@ -70,23 +70,30 @@ const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
     fontWeight: 600,
 }));
 
+const LinkText = styled(Typography)(({ theme }) => ({
+    fontWeight: 400,
+    fontFamily: "Manrope",
+    fontStyle: "normal",
+    [theme.breakpoints.down("lg")]: {
+        fontWeight: 600,
+    },
+}));
+
 const Header = () => {
+    const [mobileView, setMobileView] = useState(false);
+    const [drawerOpen, setDrawerOpen] = useState(false);
+
     const [state, setState] = useState({
-        mobileView: false,
         drawerOpen: false,
+        mobileView: false,
     });
     const navigate = useNavigate();
-    // const cookieVar = cookie.get('jwttoken')
-    const { mobileView, drawerOpen } = state;
 
     useEffect(() => {
         const setResponsiveness = () => {
             return window.innerWidth < 1200
-                ? setState((prevState) => ({ ...prevState, mobileView: true }))
-                : setState((prevState) => ({
-                      ...prevState,
-                      mobileView: false,
-                  }));
+                ? setMobileView(true)
+                : setMobileView(false);
         };
         setResponsiveness();
         window.addEventListener("resize", () => setResponsiveness());
@@ -116,16 +123,8 @@ const Header = () => {
             <BoxLinks>
                 {headerData.map((item) => (
                     <Cuslink to={item.link} key={item.link}>
-                        <CustomMenuItem>
-                            <Text
-                                sx={{
-                                    fontWeight: 400,
-                                    fontFamily: "Manrope",
-                                    fontStyle: "normal",
-                                }}
-                            >
-                                {item.text}
-                            </Text>
+                        <CustomMenuItem onClick={() => setDrawerOpen(true)}>
+                            <LinkText>{item.text}</LinkText>
                         </CustomMenuItem>
                     </Cuslink>
                 ))}
@@ -171,10 +170,6 @@ const Header = () => {
         );
     };
     const Mobile = () => {
-        const handleDrawerOpen = () =>
-            setState((prevState) => ({ ...prevState, drawerOpen: true }));
-        const handleDrawerClose = () =>
-            setState((prevState) => ({ ...prevState, drawerOpen: false }));
         return (
             <Box
                 sx={{
@@ -190,7 +185,7 @@ const Header = () => {
                         edge: "start",
                         "aria-label": "menu",
                         "aria-haspopup": "true",
-                        onClick: handleDrawerOpen,
+                        onClick: () => setDrawerOpen(true),
                     }}
                     style={{ color: "#1B1642" }}
                 >
@@ -198,19 +193,16 @@ const Header = () => {
                 </IconButton>
                 <Drawer
                     {...{
-                        anchor: "left",
+                        anchor: "right",
                         open: drawerOpen,
-                        onClose: handleDrawerClose,
+                        onClose: () => setDrawerOpen(false),
                     }}
                 >
                     <Box
                         style={{
                             width: 250,
                             padding: 15,
-                            display: "flex",
-                            flexDirection: "column",
                             height: "100%",
-                            alignItems: "center",
                         }}
                     >
                         <Logo />
