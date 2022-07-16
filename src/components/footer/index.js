@@ -164,7 +164,7 @@ const Footer = () => {
                                 {item.elems.map((itemElem, index) => (
                                     <Box key={index} sx={{ mt: 2 }}>
                                         {itemElem.link ? (
-                                            <Cuslink to="">
+                                            <Cuslink to={itemElem.link}>
                                                 <Text
                                                     sx={{
                                                         fontSize: 20,

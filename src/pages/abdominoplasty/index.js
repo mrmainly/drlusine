@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Box } from "@mui/material";
 import { styled } from "@mui/system";
@@ -12,6 +12,17 @@ import {
 } from "../../components";
 
 const Abdominoplasty = () => {
+    function backToTop() {
+        if (window.pageYOffset > 0) {
+            window.scrollBy(0, -80);
+            setTimeout(backToTop, 10);
+        }
+    }
+
+    useEffect(() => {
+        backToTop();
+    }, []);
+
     const data = [
         {
             label: "Абдоминопластика",

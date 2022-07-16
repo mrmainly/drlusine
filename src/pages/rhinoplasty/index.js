@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Box } from "@mui/material";
 
@@ -6,6 +6,17 @@ import StartScreen from "./components/StrartScreen";
 import { SecondScreen, ThreeScreen } from "../../components";
 
 const Rhinoplasty = () => {
+    function backToTop() {
+        if (window.pageYOffset > 0) {
+            window.scrollBy(0, -80);
+            setTimeout(backToTop, 10);
+        }
+    }
+
+    useEffect(() => {
+        backToTop();
+    }, []);
+
     const data = [
         {
             label: "Ринопластика",

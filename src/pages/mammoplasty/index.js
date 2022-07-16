@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Box } from "@mui/material";
 
@@ -8,6 +8,17 @@ import { ThreeScreen } from "../../components";
 import FourScreen from "./components/FourScreen";
 
 const Mammoplasty = () => {
+    function backToTop() {
+        if (window.pageYOffset > 0) {
+            window.scrollBy(0, -80);
+            setTimeout(backToTop, 10);
+        }
+    }
+
+    useEffect(() => {
+        backToTop();
+    }, []);
+
     const data = [
         {
             label: "Увеличение груди через ареолу",

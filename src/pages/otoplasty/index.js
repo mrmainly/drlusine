@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Box } from "@mui/material";
 
@@ -8,6 +8,16 @@ import SecondScreen from "./components/SecondScreen";
 import { ThreeScreen } from "../../components";
 
 const Otoplasty = () => {
+    function backToTop() {
+        if (window.pageYOffset > 0) {
+            window.scrollBy(0, -80);
+            setTimeout(backToTop, 10);
+        }
+    }
+
+    useEffect(() => {
+        backToTop();
+    }, []);
     const data = [
         {
             label: "Коррекция лопоухости",
