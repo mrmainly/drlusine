@@ -1,8 +1,10 @@
 import React from "react";
 import { styled } from "@mui/system";
 import { Box, Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import { Text, Button } from "..";
+import ROUTES from "../../routes";
 
 const CardRinoplastic = styled(Box)(({ theme }) => ({
     backgroundColor: "#FFF1D8",
@@ -88,7 +90,7 @@ const RinoplasticCard = () => {
                     <Img src="/img/rinoplastika.png" />
                 </Grid>
             </Grid>
-            <MyButton>
+            <MyButton onClick={() => navigate(ROUTES.RHINOPLASTY)}>
                 <Text sx={{ fontSize: 20, fontFamily: "Manrope" }}>
                     Подробнее
                 </Text>

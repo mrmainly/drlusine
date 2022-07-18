@@ -1,6 +1,6 @@
 const ROUTES = {
     HOME: "/",
-    Rhinoplasty: "/rhinoplasty",
+    RHINOPLASTY: "/rhinoplasty",
     Results: "/results",
     Faq: "/faq",
     Abdominoplasty: "/abdominoplasty",

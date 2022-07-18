@@ -28,7 +28,7 @@ function App() {
                 <Route path={ROUTES.HOME} element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route
-                        path={ROUTES.Rhinoplasty}
+                        path={ROUTES.RHINOPLASTY}
                         element={<Rhinoplasty />}
                     />
                     <Route path={ROUTES.Results} element={<Results />} />
