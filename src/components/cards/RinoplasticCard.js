@@ -52,6 +52,7 @@ const MyButton = styled(Button)(({ theme }) => ({
 }));
 
 const RinoplasticCard = () => {
+    const navigate = useNavigate();
     return (
         <CardRinoplastic>
             <Grid container>
