@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 import StartScreen from "./components/StartScreen";
 import SecondScreen from "./components/SecondScreen";
-import { ThreeScreen } from "../../components";
+import { ThreeScreen, ResultsSlider, Text } from "../../components";
 import FourScreen from "./components/FourScreen";
 
 const BodyModeling = () => {
@@ -33,6 +33,16 @@ const BodyModeling = () => {
             value: "450 тыс. руб",
         },
     ];
+
+    const resultsData = [
+        "image160",
+        "image162",
+        "image163",
+        "image164",
+        "IMG_3509",
+        "IMG_3478",
+    ];
+
     return (
         <Box>
             <StartScreen />
@@ -43,6 +53,12 @@ const BodyModeling = () => {
                 data={data}
             />
             <FourScreen />
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} />
+            </Box>
         </Box>
     );
 };

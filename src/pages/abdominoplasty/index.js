@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 import { Box } from "@mui/material";
 import { styled } from "@mui/system";
+import { useLocation } from "react-router-dom";
 
 import {
     Container,
@@ -9,9 +10,12 @@ import {
     StartScreen,
     SecondScreen,
     ThreeScreen,
+    ResultsSlider,
 } from "../../components";
 
 const Abdominoplasty = () => {
+    const location = useLocation();
+
     function backToTop() {
         if (window.pageYOffset > 0) {
             window.scrollBy(0, -80);
@@ -21,7 +25,7 @@ const Abdominoplasty = () => {
 
     useEffect(() => {
         backToTop();
-    }, []);
+    }, [location.pathname]);
 
     const data = [
         {
@@ -42,6 +46,20 @@ const Abdominoplasty = () => {
         },
     ];
 
+    // const resultsData = [
+    //     "image160",
+    //     "image162",
+    //     "image163",
+    //     "image164",
+    //     "image165",
+    //     "image167",
+    //     "image168",
+    //     "image170",
+    //     "image171",
+    //     "image172",
+    //     "image185",
+    // ];
+
     return (
         <Box>
             <StartScreen
@@ -60,6 +78,7 @@ const Abdominoplasty = () => {
                 title="Абдоминопластика"
                 img="/img/Rectangle2.png"
             />
+            <ResultsSlider />
         </Box>
     );
 };

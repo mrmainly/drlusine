@@ -3,7 +3,12 @@ import React, { useEffect } from "react";
 import { Box } from "@mui/material";
 
 import StartScreen from "./components/StrartScreen";
-import { SecondScreen, ThreeScreen } from "../../components";
+import {
+    SecondScreen,
+    ThreeScreen,
+    ResultsSlider,
+    Text,
+} from "../../components";
 
 const Rhinoplasty = () => {
     function backToTop() {
@@ -31,6 +36,17 @@ const Rhinoplasty = () => {
             value: "39 тыс. руб",
         },
     ];
+
+    const resultsData = [
+        "IMG_3860",
+        "IMG_3859",
+        "IMG_3858",
+        "IMG_3857",
+        "IMG_3856",
+        "IMG_3855",
+        "IMG_3854",
+    ];
+
     return (
         <Box>
             <StartScreen />
@@ -45,6 +61,15 @@ const Rhinoplasty = () => {
                 title="Ринопластика"
                 img="/img/FaceRino.png"
             />
+            <Box sx={{ mt: 7 }}>
+                <Text
+                    sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}
+                    sm={24}
+                >
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} />
+            </Box>
         </Box>
     );
 };

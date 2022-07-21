@@ -58,8 +58,11 @@ const ArrowPrevItem = styled(Box)(({ theme }) => ({
 const Img = styled("img")(({ theme }) => ({
     width: "80%",
     margin: "0 auto",
+    height: 800,
+    objectFit: "cover",
     [theme.breakpoints.down("sm")]: {
         width: "90%",
+        height: 300,
     },
 }));
 
@@ -88,8 +91,19 @@ const ArrowPrev = (props) => {
     );
 };
 
-const ResultsSlider = () => {
-    const data = [
+const ResultsSlider = ({ data }) => {
+    const settings = {
+        dots: false,
+        centerPadding: "0px",
+        infinite: true,
+        speed: 500,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        nextArrow: <ArrowNext />,
+        prevArrow: <ArrowPrev />,
+    };
+
+    const resultsData = [
         "image160",
         "image162",
         "image163",
@@ -103,24 +117,20 @@ const ResultsSlider = () => {
         "image185",
     ];
 
-    const settings = {
-        dots: false,
-        centerPadding: "0px",
-        infinite: true,
-        speed: 500,
-        slidesToScroll: 1,
-        slidesToShow: 1,
-        nextArrow: <ArrowNext />,
-        prevArrow: <ArrowPrev />,
-    };
     return (
         <Root>
             <Slider {...settings}>
-                {data.map((item, index) => (
-                    <Box key={index}>
-                        <Img src={`/img/${item}.png`} />
-                    </Box>
-                ))}
+                {data
+                    ? data.map((item, index) => (
+                          <Box key={index}>
+                              <Img src={`/img/${item}.png`} />
+                          </Box>
+                      ))
+                    : resultsData.map((item, index) => (
+                          <Box key={index}>
+                              <Img src={`/img/${item}.png`} />
+                          </Box>
+                      ))}
             </Slider>
         </Root>
     );

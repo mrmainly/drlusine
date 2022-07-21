@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 
 import { Box } from "@mui/material";
 
-import { ThreeScreen } from "../../components";
+import { ThreeScreen, ResultsSlider, Text } from "../../components";
 import StartScreen from "./components/StartScreen";
 import SecondScreen from "./components/SecondScreen";
-// import ThreeScreen from "./components/ThreeScreen";
 import FourScreen from "./components/FourScreen";
 
 const Blepharoplasty = () => {
@@ -45,6 +44,15 @@ const Blepharoplasty = () => {
             value: "450 тыс. руб",
         },
     ];
+
+    const resultsData = [
+        "image185",
+        "image172",
+        "image171",
+        "image170",
+        "image168",
+    ];
+
     return (
         <Box>
             <StartScreen />
@@ -55,6 +63,15 @@ const Blepharoplasty = () => {
                 data={data}
             />
             <FourScreen />
+            <Box sx={{ mt: 7 }}>
+                <Text
+                    sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}
+                    sm={24}
+                >
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} />
+            </Box>
         </Box>
     );
 };

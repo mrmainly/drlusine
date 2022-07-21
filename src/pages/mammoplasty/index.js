@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 import StartScreen from "./components/StartScreen";
 import SecondScreen from "./components/SecondScreen";
-import { ThreeScreen } from "../../components";
+import { ThreeScreen, ResultsSlider, Text } from "../../components";
 import FourScreen from "./components/FourScreen";
 
 const Mammoplasty = () => {
@@ -49,6 +49,9 @@ const Mammoplasty = () => {
             value: "135 тыс. руб",
         },
     ];
+
+    const resultsData = ["image165", "image167", "IMG_3495"];
+
     return (
         <Box>
             <StartScreen />
@@ -59,6 +62,15 @@ const Mammoplasty = () => {
                 data={data}
             />
             <FourScreen />
+            <Box sx={{ mt: 7 }}>
+                <Text
+                    sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}
+                    sm={24}
+                >
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} />
+            </Box>
         </Box>
     );
 };
