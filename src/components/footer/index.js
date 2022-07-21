@@ -124,7 +124,7 @@ const Footer = () => {
                         </Text>
                     </BoxLogo>
                     <TextDesctop>
-                        <img src={"/img/logofooter.png"} />
+                        <img src={"/img/image1483.svg"} />
                         <Text
                             sx={{ ml: 1, fontWeight: 700, fontStyle: "normal" }}
                         >
@@ -256,7 +256,7 @@ const Footer = () => {
                     </GridElem>
                 </Grid>
                 <TextMobile>
-                    <img src={"/img/logofooter.png"} />
+                    <img src={"/img/image1483.svg"} />
                     <Text sx={{ ml: 1, fontWeight: 700, fontStyle: "normal" }}>
                         все права защищены
                     </Text>

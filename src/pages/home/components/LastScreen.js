@@ -64,6 +64,28 @@ const CusButton = styled(Button)(({ theme }) => ({
     zIndex: 3,
 }));
 
+const CusButton2 = styled(Button)(({ theme }) => ({
+    background:
+        "radial-gradient(84.91% 84.91% at 50.14% 6.9%, rgba(255, 255, 255, 0.43) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(358.83deg, rgba(0, 0, 0, 0.07) 24.23%, rgba(0, 0, 0, 0) 132.68%), #FFE3B2;",
+    boxShadow: "0px 4px 5px rgba(0, 0, 0, 0.25), 0px 4px 0px #DECDA3",
+    color: "#3E3E3E",
+    width: 320,
+    height: 80,
+    fontSize: 24,
+    fontWeight: "500",
+    [theme.breakpoints.down("sm")]: {
+        width: 203,
+        minHeight: 50,
+        fontSize: 14,
+    },
+    "&:hover": {
+        color: "grey",
+        backgroundColor: "#e6e9ed",
+    },
+
+    zIndex: 3,
+}));
+
 const LastScreen = () => {
     const [open, setOpen] = useState(false);
     const [mobileView, setMobileView] = useState(false);
@@ -150,9 +172,9 @@ const LastScreen = () => {
                         placeholder="Ваше сообщение"
                         required
                     />
-                    <Button sx={{ mt: 3 }} type="submit">
+                    <CusButton2 sx={{ mt: 3 }} type="submit">
                         записаться{" "}
-                    </Button>
+                    </CusButton2>
                     <Text
                         sx={{
                             fontSize: 18,
