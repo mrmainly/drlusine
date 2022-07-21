@@ -106,7 +106,7 @@ const BenefitsCard = ({ text, img }) => {
                 >
                     {text}
                 </Text>
-                <img src="/img/image14.png" style={{ width: "80%" }} />
+                <img src="/img/image142.png" style={{ width: "80%" }} />
             </StarsBox>
         );
     };
