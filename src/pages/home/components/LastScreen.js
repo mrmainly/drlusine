@@ -47,8 +47,8 @@ const CusButton = styled(Button)(({ theme }) => ({
         "radial-gradient(84.91% 84.91% at 50.14% 6.9%, rgba(255, 255, 255, 0.43) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(358.83deg, rgba(0, 0, 0, 0.07) 24.23%, rgba(0, 0, 0, 0) 132.68%), #FFE3B2;",
     boxShadow: "0px 4px 5px rgba(0, 0, 0, 0.25), 0px 4px 0px #DECDA3",
     color: "#3E3E3E",
-    width: 320,
-    height: 80,
+    width: 500,
+    height: 100,
     fontSize: 24,
     fontWeight: "500",
     [theme.breakpoints.down("sm")]: {
@@ -97,7 +97,7 @@ const LastScreen = () => {
         <Main wrapper={true} minHeight={400}>
             <Box sx={{ display: "flex", justifyContent: "center", mb: 10 }}>
                 <CusButton onClick={() => setOpen(true)}>
-                    Необходимые анализы, перед провидением опирации
+                    НЕОБХОДИМЫЕ АНАЛИЗЫ ПЕРЕД ПРОВЕДЕНИЕМ ОПЕРАЦИИ
                 </CusButton>
             </Box>
             <AnalysisModal open={open} handleClose={handleClose} />
