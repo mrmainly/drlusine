@@ -118,7 +118,7 @@ const Contacts = () => {
                                         )
                                     }
                                 >
-                                    <img src="/img/Group57.png" />
+                                    <img src="/img/Group2461.svg" />
                                 </IconButton>
                                 <NavHashLink
                                     to="/#form-anchor"
@@ -126,7 +126,7 @@ const Contacts = () => {
                                     style={{ textDecoration: "none" }}
                                 >
                                     <IconButton>
-                                        <img src="/img/Groupwhat2459.png" />
+                                        <img src="/img/Group2459.svg" />
                                     </IconButton>
                                 </NavHashLink>
                                 <IconButton
@@ -136,7 +136,7 @@ const Contacts = () => {
                                         )
                                     }
                                 >
-                                    <img src="/img/Group59.png" />
+                                    <img src="/img/Group39.svg" />
                                 </IconButton>
                             </Box>
                         </Box>

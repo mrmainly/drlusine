@@ -75,7 +75,7 @@ const LastScreen = () => {
         <Main wrapper={true} minHeight={400}>
             <Box sx={{ display: "flex", justifyContent: "center", mb: 10 }}>
                 <Button sx={{ width: 500 }} onClick={() => setOpen(true)}>
-                    Узнать какие анализы нужны
+                    Необходимые анализы, перед провидением опирации
                 </Button>
             </Box>
             <AnalysisModal open={open} handleClose={handleClose} />
@@ -84,7 +84,7 @@ const LastScreen = () => {
                 md={30}
                 sm={24}
             >
-                Свяжитесь с нами если
+                Свяжитесь с нами, если
                 <br /> остались вопросы
             </Text>
             <Box

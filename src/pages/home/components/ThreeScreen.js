@@ -2,6 +2,7 @@ import React from "react";
 
 import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/system";
+import { useNavigate } from "react-router-dom";
 
 import {
     Container,
@@ -53,6 +54,8 @@ const MyButton = styled(Button)(({ theme }) => ({
 }));
 
 const ThreeScreen = () => {
+    const navigate = useNavigate();
+
     const data = [
         {
             bgimg: "Group2453.png",
@@ -159,7 +162,7 @@ const ThreeScreen = () => {
                         </Text>
                     </Grid>
                 </Grid>
-                <MyButton>
+                <MyButton onClick={() => navigate(ROUTES.RHINOPLASTY)}>
                     <Text sx={{ fontSize: 20, fontFamily: "Manrope" }} sm={12}>
                         Подробнее
                     </Text>
