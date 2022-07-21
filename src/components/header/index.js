@@ -123,7 +123,7 @@ const Header = () => {
             <BoxLinks>
                 {headerData.map((item) => (
                     <Cuslink to={item.link} key={item.link}>
-                        <CustomMenuItem onClick={() => setDrawerOpen(true)}>
+                        <CustomMenuItem onClick={() => setDrawerOpen(false)}>
                             <LinkText>{item.text}</LinkText>
                         </CustomMenuItem>
                     </Cuslink>
