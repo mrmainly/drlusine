@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { Box, TextField } from "@mui/material";
 import { styled } from "@mui/system";
 
-import { Container, Text, Button } from "../../../components";
+import { Container, Text, Button, AnalysisModal } from "../../../components";
 
 const Main = styled(Container)(({ theme }) => ({
     paddingTop: 100,
@@ -43,7 +43,13 @@ const Form = styled("form")(({ theme }) => ({
 }));
 
 const LastScreen = () => {
+    const [open, setOpen] = useState(false);
+
     const description = useRef(null);
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     const PostMassage = (e) => {
         e.preventDefault();
@@ -54,6 +60,12 @@ const LastScreen = () => {
 
     return (
         <Main wrapper={true} minHeight={400}>
+            <Box sx={{ display: "flex", justifyContent: "center", mb: 10 }}>
+                <Button sx={{ width: 500 }} onClick={() => setOpen(true)}>
+                    Узнать какие анализы нужны
+                </Button>
+            </Box>
+            <AnalysisModal open={open} handleClose={handleClose} />
             <Text
                 sx={{ fontSize: 48, color: "#3E3E3E", textAlign: "center" }}
                 md={30}

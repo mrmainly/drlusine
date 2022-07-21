@@ -15,6 +15,8 @@ import ResultsSlider from "./sliders/ResultsSlider";
 import RinoplasticCard from "./cards/RinoplasticCard";
 import ReviewSlider from "./sliders/ReviewSlider";
 
+import AnalysisModal from "./modals/analysis-modal";
+
 export {
     Header,
     Footer,
@@ -30,4 +32,5 @@ export {
     ResultsSlider,
     RinoplasticCard,
     ReviewSlider,
+    AnalysisModal,
 };
