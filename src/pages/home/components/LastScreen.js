@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Box, TextField } from "@mui/material";
+import { Box, TextField, Button } from "@mui/material";
 import { styled } from "@mui/system";
 
-import { Container, Text, Button, AnalysisModal } from "../../../components";
+import { Container, Text, AnalysisModal } from "../../../components";
 
 const Main = styled(Container)(({ theme }) => ({
     paddingTop: 100,
@@ -42,6 +42,28 @@ const Form = styled("form")(({ theme }) => ({
     },
 }));
 
+const CusButton = styled(Button)(({ theme }) => ({
+    background:
+        "radial-gradient(84.91% 84.91% at 50.14% 6.9%, rgba(255, 255, 255, 0.43) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(358.83deg, rgba(0, 0, 0, 0.07) 24.23%, rgba(0, 0, 0, 0) 132.68%), #FFE3B2;",
+    boxShadow: "0px 4px 5px rgba(0, 0, 0, 0.25), 0px 4px 0px #DECDA3",
+    color: "#3E3E3E",
+    width: 320,
+    height: 80,
+    fontSize: 24,
+    fontWeight: "500",
+    [theme.breakpoints.down("sm")]: {
+        width: 253,
+        minHeight: 50,
+        fontSize: 14,
+    },
+    "&:hover": {
+        color: "grey",
+        backgroundColor: "#e6e9ed",
+    },
+
+    zIndex: 3,
+}));
+
 const LastScreen = () => {
     const [open, setOpen] = useState(false);
     const [mobileView, setMobileView] = useState(false);
@@ -74,9 +96,9 @@ const LastScreen = () => {
     return (
         <Main wrapper={true} minHeight={400}>
             <Box sx={{ display: "flex", justifyContent: "center", mb: 10 }}>
-                <Button sx={{ width: 500 }} onClick={() => setOpen(true)}>
+                <CusButton onClick={() => setOpen(true)}>
                     Необходимые анализы, перед провидением опирации
-                </Button>
+                </CusButton>
             </Box>
             <AnalysisModal open={open} handleClose={handleClose} />
             <Text
@@ -143,7 +165,7 @@ const LastScreen = () => {
                         sm={12}
                     >
                         Нажимая на кнопку вы соглашаетесь с<br /> политикой
-                        обработки персональных данных
+                        обработки, персональных данных
                     </Text>
                 </Form>
             </Box>

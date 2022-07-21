@@ -91,9 +91,9 @@ const ArrowPrev = (props) => {
 const DocumentSlider = () => {
     const data = [
         "Group2445.png",
-        "IMG_8246.png",
-        "IMG_8247.png",
-        "IMG_9722.png",
+        "Group2446.svg",
+        "Group2447.svg",
+        "Group2448.svg",
     ];
 
     const settings = {

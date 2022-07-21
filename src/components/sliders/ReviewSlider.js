@@ -90,7 +90,13 @@ const ArrowPrev = (props) => {
 };
 
 const ReviewSlider = () => {
-    const data = ["Group48.png", "Group48.png"];
+    const data = [
+        "Group48feed.svg",
+        "Group52.svg",
+        "Group51.svg",
+        "Group50.svg",
+        "Group49.svg",
+    ];
 
     const settings = {
         dots: false,

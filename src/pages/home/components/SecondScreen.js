@@ -46,7 +46,7 @@ const SecondScreen = () => {
                     <Grid item lg={3.5} xl={3.5} md={4} sm={12} xs={12}>
                         <BenefitsCard
                             img="/img/face.png"
-                            text="Большой опыт в сфере медецины и пластических операций"
+                            text="Большой опыт в сфере медицины и пластических операций"
                         />
                     </Grid>
                     <Grid item lg={5} xl={5} md={4} sm={12}>
