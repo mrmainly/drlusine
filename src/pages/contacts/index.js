@@ -1,6 +1,7 @@
-import React, { useMemo, useEffect, useState } from "react";
-import { CircularProgress, MenuItem, styled } from "@mui/material";
-import { Box, Grid } from "@mui/material";
+import React, { useState } from "react";
+import { styled } from "@mui/material";
+import { Box, Grid, IconButton } from "@mui/material";
+import { NavHashLink } from "react-router-hash-link";
 
 import { Text } from "../../components";
 
@@ -110,9 +111,33 @@ const Contacts = () => {
                                     mt: 2,
                                 }}
                             >
-                                <img src="/img/Group57.png" />
-                                <img src="/img/Group58.png" />
-                                <img src="/img/Group59.png" />
+                                <IconButton
+                                    onClick={() =>
+                                        window.location.assign(
+                                            "https://t.me/DrLusineWork"
+                                        )
+                                    }
+                                >
+                                    <img src="/img/Group57.png" />
+                                </IconButton>
+                                <NavHashLink
+                                    to="/#form-anchor"
+                                    smooth
+                                    style={{ textDecoration: "none" }}
+                                >
+                                    <IconButton>
+                                        <img src="/img/Groupwhat2459.png" />
+                                    </IconButton>
+                                </NavHashLink>
+                                <IconButton
+                                    onClick={() =>
+                                        window.location.assign(
+                                            "https://instagram.com/dr.lusine?igshid=YmMyMTA2M2Y="
+                                        )
+                                    }
+                                >
+                                    <img src="/img/Group59.png" />
+                                </IconButton>
                             </Box>
                         </Box>
                     </Box>

@@ -1,9 +1,10 @@
 import React from "react";
 
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, IconButton } from "@mui/material";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
 import ROUTES from "../../routes";
 import { Container, Text } from "..";
@@ -86,14 +87,6 @@ const Footer = () => {
                 },
                 { label: "О Режим работы", type: "grey" },
                 { label: "10:00 - 19:00" },
-            ],
-        },
-        {
-            title: "+7 964 788 77 88",
-            elems: [
-                { label: "Мы в социальных сетях" },
-                { img: "", link: "" },
-                { img: "", link: "" },
             ],
         },
     ];
@@ -192,6 +185,74 @@ const Footer = () => {
                             </Box>
                         </GridElem>
                     ))}
+                    <GridElem
+                        sx={{ mt: 2 }}
+                        item
+                        xl={4}
+                        lg={4}
+                        md={4}
+                        sm={6}
+                        xs={12}
+                    >
+                        <Text
+                            sx={{
+                                fontStyle: "normal",
+                                fontFamily: "Manrope",
+                                fontWeight: 700,
+                                fontSize: 20,
+                            }}
+                        >
+                            +7 964 788 77 88
+                        </Text>
+                        <Box sx={{ marginTop: 1 }}>
+                            <Text
+                                sx={{
+                                    color: "grey",
+                                    fontSize: 20,
+                                    fontWeight: 300,
+                                    fontStyle: "normal",
+                                }}
+                            >
+                                Мы в социальных сетях
+                            </Text>
+                            <Box
+                                sx={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    width: 180,
+                                    mt: 2,
+                                }}
+                            >
+                                <IconButton
+                                    onClick={() =>
+                                        window.location.assign(
+                                            "https://t.me/DrLusineWork"
+                                        )
+                                    }
+                                >
+                                    <img src="/img/Group57.png" />
+                                </IconButton>
+                                <NavHashLink
+                                    to="/#form-anchor"
+                                    smooth
+                                    style={{ textDecoration: "none" }}
+                                >
+                                    <IconButton>
+                                        <img src="/img/Groupwhat2459.png" />
+                                    </IconButton>
+                                </NavHashLink>
+                                <IconButton
+                                    onClick={() =>
+                                        window.location.assign(
+                                            "https://instagram.com/dr.lusine?igshid=YmMyMTA2M2Y="
+                                        )
+                                    }
+                                >
+                                    <img src="/img/Group59.png" />
+                                </IconButton>
+                            </Box>
+                        </Box>
+                    </GridElem>
                 </Grid>
                 <TextMobile>
                     <img src={"/img/logofooter.png"} />

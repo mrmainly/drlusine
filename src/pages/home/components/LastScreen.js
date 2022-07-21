@@ -101,7 +101,8 @@ const LastScreen = () => {
                         }}
                         sm={18}
                     >
-                        Укажите удобный для вас <br /> мессенджер
+                        Заявка на запись
+                        <br /> через Whatsapp
                     </Text>
                     <Text
                         sx={{
@@ -113,7 +114,7 @@ const LastScreen = () => {
                         }}
                         sm={14}
                     >
-                        Более 1000 довольных клиентов
+                        Более 3000 довольных клиентов
                     </Text>
                     <Input
                         inputRef={description}
