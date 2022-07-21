@@ -55,17 +55,6 @@ const ArrowPrevItem = styled(Box)(({ theme }) => ({
     },
 }));
 
-const Img = styled("img")(({ theme }) => ({
-    width: "80%",
-    margin: "0 auto",
-    height: 800,
-    objectFit: "cover",
-    [theme.breakpoints.down("sm")]: {
-        width: "90%",
-        height: 300,
-    },
-}));
-
 const Root = styled(Container)(({ theme }) => ({
     marginTop: 78,
     [theme.breakpoints.down("sm")]: {
@@ -91,7 +80,18 @@ const ArrowPrev = (props) => {
     );
 };
 
-const ResultsSlider = ({ data }) => {
+const ResultsSlider = ({ data, height, heightSm }) => {
+    const Img = styled("img")(({ theme }) => ({
+        width: "80%",
+        margin: "0 auto",
+        height: height ? height : "auto",
+        objectFit: "cover",
+        [theme.breakpoints.down("sm")]: {
+            width: "90%",
+            height: heightSm ? heightSm : "auto",
+        },
+    }));
+
     const settings = {
         dots: false,
         centerPadding: "0px",

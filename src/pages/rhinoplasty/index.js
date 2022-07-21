@@ -68,7 +68,7 @@ const Rhinoplasty = () => {
                 >
                     Результаты
                 </Text>
-                <ResultsSlider data={resultsData} />
+                <ResultsSlider data={resultsData} height={800} heightSm={300} />
             </Box>
         </Box>
     );
