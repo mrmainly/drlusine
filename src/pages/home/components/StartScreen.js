@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@mui/material";
 import { styled } from "@mui/system";
+import { NavHashLink } from "react-router-hash-link";
 
 import { Text, Button, Container } from "../../../components";
 
@@ -64,8 +65,7 @@ const MobileBox = styled(Box)(({ theme }) => ({
 
 const StartBlog = () => {
     const elem = [
-        "5 лет опыта",
-        "Более 300 довольных клиентов",
+        "Более 1000 довольных клиентов",
         "Делаем людей уверенными, счастливыми и красивыми",
     ];
     return (
@@ -127,14 +127,13 @@ const StartBlog = () => {
                         </Box>
                         <MobileBox>
                             <MobileImg src={"/img/women.png"} />
-                            <Button
-                                onClick={() =>
-                                    (window.location.href =
-                                        "https://t.me/DrLusineWork")
-                                }
+                            <NavHashLink
+                                to="#form-anchor"
+                                smooth
+                                style={{ textDecoration: "none" }}
                             >
-                                записаться
-                            </Button>
+                                <Button>записаться</Button>
+                            </NavHashLink>
                         </MobileBox>
                     </Box>
                     <Box>

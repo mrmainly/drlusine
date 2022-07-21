@@ -11,6 +11,8 @@ import Abdominoplasty from "./abdominoplasty";
 import AboutMyself from "./aboutMyself";
 import Blepharoplasty from "./blepharoplasty";
 import Faq from "./faq";
+import IntimatePlastic from "./intimatePlastic";
+import Cosmetology from "./cosmetology";
 
 export {
     Home,
@@ -26,4 +28,6 @@ export {
     AboutMyself,
     Blepharoplasty,
     Faq,
+    IntimatePlastic,
+    Cosmetology,
 };

@@ -8,6 +8,7 @@ import ResultsScreen from "./components/ResultsScreen";
 import FaqScreen from "./components/FaqScreen";
 import FourScreen from "./components/FourScreen";
 import FiveScreen from "./components/FiveScreen";
+import LastScreen from "./components/LastScreen";
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <FiveScreen />
             <ResultsScreen />
             <FaqScreen />
+            <LastScreen />
         </Box>
     );
 };

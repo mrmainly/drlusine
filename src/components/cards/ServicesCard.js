@@ -49,6 +49,16 @@ const Btn = styled(Button)(({ theme }) => ({
 const ServicesCard = ({ text, bgimg, title, link, type }) => {
     const navigate = useNavigate();
 
+    const TextBox = styled(Box)(({ theme }) => ({
+        paddingLeft: type === "right" ? 160 : type === "left" ? 30 : 63,
+        paddingRight: type === "left" ? 160 : type === "right" ? 50 : 63,
+        paddingTop: 20,
+        [theme.breakpoints.down("sm")]: {
+            paddingLeft: type === "right" ? 100 : type === "left" ? 30 : 63,
+            paddingRight: type === "left" ? 100 : type === "right" ? 50 : 63,
+        },
+    }));
+
     return (
         <Root style={{ backgroundImage: `url(/img/${bgimg}` }}>
             <Text
@@ -63,24 +73,24 @@ const ServicesCard = ({ text, bgimg, title, link, type }) => {
             >
                 {title}
             </Text>
-            <Box
-                sx={{
-                    pl: type === "right" ? 16 : type === "left" ? 5 : 6.3,
-                    pr: type === "left" ? 16 : type === "right" ? 5 : 6.3,
-                    pt: 2,
-                }}
+            <TextBox
+            // sx={{
+            //     pl: type === "right" ? 16 : type === "left" ? 5 : 6.3,
+            //     pr: type === "left" ? 18 : type === "right" ? 5 : 6.3,
+            //     pt: 2,
+            // }}
             >
                 <Text
                     sx={{
                         fontFamily: "Manrope",
                         fontWeight: 600,
-                        fontSize: 16,
+                        fontSize: 15,
                     }}
                     sm={9}
                 >
                     {text}
                 </Text>
-            </Box>
+            </TextBox>
             <Btn
                 variant="contained"
                 color="success"

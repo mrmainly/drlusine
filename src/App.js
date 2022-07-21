@@ -18,6 +18,8 @@ import {
     AboutMyself,
     Blepharoplasty,
     Faq,
+    IntimatePlastic,
+    Cosmetology,
 } from "./pages";
 import ROUTES from "./routes";
 
@@ -59,6 +61,14 @@ function App() {
                     <Route
                         path={ROUTES.Mammoplasty}
                         element={<Mammoplasty />}
+                    />
+                    <Route
+                        path={ROUTES.IntimatePlastic}
+                        element={<IntimatePlastic />}
+                    />
+                    <Route
+                        path={ROUTES.Cosmetology}
+                        element={<Cosmetology />}
                     />
                 </Route>
             </Routes>

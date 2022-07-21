@@ -12,6 +12,8 @@ const ROUTES = {
     Otoplasty: "/otoplasty",
     Liposuction: "/liposuction",
     Mammoplasty: "/mammoplasty",
+    IntimatePlastic: "/intimate-plastic",
+    Cosmetology: "/cosmetology",
 };
 
 export default ROUTES;

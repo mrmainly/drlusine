@@ -1,32 +1,57 @@
-import React from "react";
-import { Box, Grid } from "@mui/material";
+import React, { useState, useRef } from "react";
+import { Box, TextField } from "@mui/material";
 import { styled } from "@mui/system";
 
-import { Container, Text, ReviewSlider } from "../../../components";
+import { Container, Text, Button } from "../../../components";
 
 const Main = styled(Container)(({ theme }) => ({
     paddingTop: 100,
     background: "white",
     marginBottom: "-200px",
-    paddingBottom: 300,
+    paddingBottom: 100,
 }));
 
-const Form = styled("div")(({ theme }) => ({
+const Input = styled(TextField)(({ theme }) => ({
+    background: "#FFFAED",
+    marginTop: 23,
+    width: "80%",
+    [theme.breakpoints.down("sm")]: {
+        width: "90%",
+    },
+}));
+
+const Form = styled("form")(({ theme }) => ({
     width: 490,
-    height: 660,
-    backgroundImage: "url(/img/Rectangle36.png)",
+    height: 670,
+    backgroundImage: "url(/img/Rectangle3634.png)",
     backgroundRepeat: "no-repeat",
     backgroundSize: "contain",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     marginTop: 80,
-    paddingTop: 40,
+    paddingTop: 35,
     paddingLeft: 10,
     paddingRight: 10,
-    [theme.breakpoints.down("md")]: {
-        width: 300,
+    [theme.breakpoints.down("sm")]: {
+        backgroundImg: "none",
+        backgroundColor: "#FFF1D8",
+        borderRadius: 16,
+        height: "max-content",
+        paddingBottom: 35,
     },
 }));
 
 const LastScreen = () => {
+    const description = useRef(null);
+
+    const PostMassage = (e) => {
+        e.preventDefault();
+        window.location.assign(
+            `https://web.whatsapp.com/send/?phone=89647887788&text=${description.current.value}&type=phone_number&app_absent=0`
+        );
+    };
+
     return (
         <Main wrapper={true} minHeight={400}>
             <Text
@@ -37,31 +62,65 @@ const LastScreen = () => {
                 Свяжитесь с нами если
                 <br /> остались вопросы
             </Text>
-            <Form>
-                <Text
-                    sx={{
-                        fontSize: 24,
-                        textAlign: "center",
-                        fontFamily: "Manrope",
-                        fontWeight: 700,
-                    }}
-                >
-                    Укажите удобный
-                    <br /> для вас мессенджер
-                </Text>
-                <Text
-                    sx={{
-                        fontrSize: 16,
-                        fontFamily: "Manrope",
-                        textAlign: "center",
-                        mt: 1,
-                        color: "#9C9C9C",
-                    }}
-                >
-                    Более 300 довольных клиентов
-                </Text>
-            </Form>
-            <a href="tg://resolve?domain=79647887788">ffff</a>
+            <Box
+                sx={{ display: "flex", justifyContent: "center" }}
+                id="form-anchor"
+            >
+                <Form onSubmit={PostMassage}>
+                    <Text
+                        sx={{
+                            fontSize: 24,
+                            textAlign: "center",
+                            fontFamily: "Manrope",
+                            fontWeight: 700,
+                        }}
+                        sm={18}
+                    >
+                        Укажите удобный для вас <br /> мессенджер
+                    </Text>
+                    <Text
+                        sx={{
+                            fontrSize: 16,
+                            fontFamily: "Manrope",
+                            textAlign: "center",
+                            mt: 1,
+                            color: "#9C9C9C",
+                        }}
+                        sm={14}
+                    >
+                        Более 1000 довольных клиентов
+                    </Text>
+                    <Input
+                        inputRef={description}
+                        id="outlined-multiline-static"
+                        multiline
+                        fullWidth
+                        variant="outlined"
+                        color="primary"
+                        aria-label="maximum height"
+                        minRows={6}
+                        placeholder="Ваше сообщение"
+                        required
+                    />
+                    <Button sx={{ mt: 3 }} type="submit">
+                        записаться{" "}
+                    </Button>
+                    <Text
+                        sx={{
+                            fontSize: 18,
+                            textAlign: "center",
+                            fontFamily: "Manrope",
+                            fontWeight: 500,
+                            color: "#9C9C9C",
+                            mt: 2.5,
+                        }}
+                        sm={12}
+                    >
+                        Нажимая на кнопку вы соглашаетесь с<br /> политикой
+                        обработки персональных данных
+                    </Text>
+                </Form>
+            </Box>
         </Main>
     );
 };

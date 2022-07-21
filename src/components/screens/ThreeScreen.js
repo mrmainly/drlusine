@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/system";
+import { NavHashLink } from "react-router-hash-link";
 
 import { Container, Text, Button } from "..";
 
@@ -86,18 +87,20 @@ const ThreeScreen = ({ data, title, img, type }) => {
                     }}
                 >
                     <Img src={img} />
-                    <MyButton
-                        onClick={() =>
-                            (window.location.href = "https://t.me/DrLusineWork")
-                        }
+                    <NavHashLink
+                        to="/#form-anchor"
+                        smooth
+                        style={{ textDecoration: "none" }}
                     >
-                        <Text
-                            sx={{ fontSize: 20, fontFamily: "Manrope" }}
-                            sm={14}
-                        >
-                            записаться
-                        </Text>
-                    </MyButton>
+                        <MyButton>
+                            <Text
+                                sx={{ fontSize: 20, fontFamily: "Manrope" }}
+                                sm={14}
+                            >
+                                записаться
+                            </Text>
+                        </MyButton>
+                    </NavHashLink>
                 </Grid>
                 <Grid item xl={8} lg={7} md={7} sm={12} xs={12}>
                     <Title sx={{ fontSize: 40 }} sm={24}>
