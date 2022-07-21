@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Box, TextField } from "@mui/material";
 import { styled } from "@mui/system";
 
@@ -44,8 +44,19 @@ const Form = styled("form")(({ theme }) => ({
 
 const LastScreen = () => {
     const [open, setOpen] = useState(false);
+    const [mobileView, setMobileView] = useState(false);
 
     const description = useRef(null);
+
+    useEffect(() => {
+        const setResponsiveness = () => {
+            return window.innerWidth < 1200
+                ? setMobileView(true)
+                : setMobileView(false);
+        };
+        setResponsiveness();
+        window.addEventListener("resize", () => setResponsiveness());
+    }, []);
 
     const handleClose = () => {
         setOpen(false);
@@ -54,7 +65,9 @@ const LastScreen = () => {
     const PostMassage = (e) => {
         e.preventDefault();
         window.location.assign(
-            `https://web.whatsapp.com/send/?phone=89647887788&text=${description.current.value}&type=phone_number&app_absent=0`
+            mobileView
+                ? `https://api.whatsapp.com/send/?phone=79647887788&text=${description.current.value}`
+                : `https://web.whatsapp.com/send/?phone=89647887788&text=${description.current.value}&type=phone_number&app_absent=0`
         );
     };
 
