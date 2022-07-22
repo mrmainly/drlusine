@@ -37,6 +37,9 @@ const Down = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("lg")]: {
         marginTop: "-130px",
     },
+    [theme.breakpoints.up("xl")]: {
+        marginTop: "-290px",
+    },
 }));
 
 const MobileImg = styled("img")(({ theme }) => ({

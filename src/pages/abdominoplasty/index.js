@@ -25,7 +25,7 @@ const Abdominoplasty = () => {
 
     useEffect(() => {
         backToTop();
-    }, [location.pathname]);
+    }, []);
 
     const data = [
         {
@@ -46,20 +46,6 @@ const Abdominoplasty = () => {
         },
     ];
 
-    // const resultsData = [
-    //     "image160",
-    //     "image162",
-    //     "image163",
-    //     "image164",
-    //     "image165",
-    //     "image167",
-    //     "image168",
-    //     "image170",
-    //     "image171",
-    //     "image172",
-    //     "image185",
-    // ];
-
     return (
         <Box>
             <StartScreen
@@ -78,7 +64,6 @@ const Abdominoplasty = () => {
                 title="Абдоминопластика"
                 img="/img/Rectangle2.png"
             />
-            <ResultsSlider />
         </Box>
     );
 };
