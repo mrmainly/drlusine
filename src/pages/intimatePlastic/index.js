@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 import StartScreen from "./components/StartScreen";
 import SecondScreen from "./components/SecondScreen";
-import { ThreeScreen } from "../../components";
+import { ThreeScreen, ResultsSlider, Text } from "../../components";
 
 const IntimatePlastic = () => {
     function backToTop() {
@@ -32,6 +32,9 @@ const IntimatePlastic = () => {
             value: "от 45 тыс. руб",
         },
     ];
+
+    const resultsData = ["IMG_3864"];
+
     return (
         <Box>
             <StartScreen />
@@ -41,6 +44,12 @@ const IntimatePlastic = () => {
                 title="Услуги и цены"
                 data={data}
             />
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} />
+            </Box>
         </Box>
     );
 };

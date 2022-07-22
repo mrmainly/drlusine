@@ -13,17 +13,26 @@ const Root = styled(Container)(({ theme }) => ({
     [theme.breakpoints.down("sm")]: {
         marginTop: "-410px",
     },
+    overflow: "hidden",
 }));
 
 const Img = styled("img")(({ theme }) => ({
+    [theme.breakpoints.up("xl")]: {
+        width: 550,
+    },
     [theme.breakpoints.down("xl")]: {
-        width: "100%",
+        width: 550,
     },
     [theme.breakpoints.down("lg")]: {
-        width: 450,
+        width: "100%",
+    },
+    [theme.breakpoints.down("md")]: {
+        width: 400,
+        marginLeft: 80,
     },
     [theme.breakpoints.down("sm")]: {
         width: 350,
+        marginLeft: 60,
     },
 }));
 
@@ -56,6 +65,8 @@ const GridMain = styled(Grid)(({ theme }) => ({
     marginBottom: "-4px",
     [theme.breakpoints.down("md")]: {
         marginBottom: 0,
+        display: "flex",
+        jusitfyContent: "center",
     },
 }));
 
@@ -64,18 +75,28 @@ const StartScreen = () => {
         <>
             <Root wrapper={true} minHeight={475}>
                 <GridMain container>
-                    <GridText item xl={7} lg={7} md={7} sm={7}>
+                    <GridText item xl={7} lg={6} md={6} sm={7}>
                         <Box sx={{ mt: 14 }}>
                             <Text sx={{ fontSize: 60 }} lg={50}>
                                 Косметология
                             </Text>
-                            <Text sx={{ fontSize: 32 }} lg={25}>
-                                Помогаем женщине надолго сохранить
-                                гинекологическое здоровье
+                            <Text sx={{ fontSize: 16 }} lg={12}>
+                                Косметология - эта наука и современная область
+                                медицины на стыке двух наук: дерматологии (науки
+                                о коже) и физиотерапии (науке о воздействии
+                                природных и иных факторов на человеческий
+                                организм). В современном мире медицинская
+                                косметология подразумевает глубокое изучение
+                                проблемы и поиск методов её решения. Для этого
+                                используются разнообразные активные вещества и
+                                специализированное оборудование и, конечно же,
+                                опыт и знания самого специалиста! Весь спектр
+                                услуг по уходу за кожей лица и тела сейчас
+                                доступны практически каждой женщине.
                             </Text>
                         </Box>
                     </GridText>
-                    <GridImg item xl={5} lg={5} md={5} sm={12} xs={12}>
+                    <GridImg item xl={5} lg={6} md={6} sm={12} xs={12}>
                         <Img src="/img/kosmetologia-PhotoRoom.png" />
                     </GridImg>
                 </GridMain>
@@ -83,7 +104,16 @@ const StartScreen = () => {
             <BoxMobile>
                 <Text sx={{ fontSize: 28 }}>Косметология</Text>
                 <Text sx={{ fontSize: 24, mt: 1 }}>
-                    Помогаем женщине надолго сохранить гинекологическое здоровье
+                    Косметология - эта наука и современная область медицины на
+                    стыке двух наук: дерматологии (науки о коже) и физиотерапии
+                    (науке о воздействии природных и иных факторов на
+                    человеческий организм). В современном мире медицинская
+                    косметология подразумевает глубокое изучение проблемы и
+                    поиск методов её решения. Для этого используются
+                    разнообразные активные вещества и специализированное
+                    оборудование и, конечно же, опыт и знания самого
+                    специалиста! Весь спектр услуг по уходу за кожей лица и тела
+                    сейчас доступны практически каждой женщине.
                 </Text>
             </BoxMobile>
         </>
