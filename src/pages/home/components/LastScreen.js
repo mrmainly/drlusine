@@ -75,7 +75,7 @@ const CusButton2 = styled(Button)(({ theme }) => ({
     fontWeight: "500",
     [theme.breakpoints.down("sm")]: {
         width: 203,
-        minHeight: 50,
+        height: 50,
         fontSize: 14,
     },
     "&:hover": {
