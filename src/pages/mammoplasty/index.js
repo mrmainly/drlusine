@@ -50,7 +50,13 @@ const Mammoplasty = () => {
         },
     ];
 
-    const resultsData = ["image165", "image167", "IMG_3495"];
+    const resultsData = [
+        "image165",
+        "image167",
+        "IMG_3495",
+        "IMG_4006",
+        "IMG_3946",
+    ];
 
     return (
         <Box>

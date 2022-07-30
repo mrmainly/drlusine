@@ -51,6 +51,9 @@ const Blepharoplasty = () => {
         "image171",
         "image170",
         "image168",
+        "IMG_3941",
+        "IMG_4023",
+        "IMG_4020",
     ];
 
     return (
@@ -70,7 +73,7 @@ const Blepharoplasty = () => {
                 >
                     Результаты
                 </Text>
-                <ResultsSlider data={resultsData} />
+                <ResultsSlider data={resultsData} height={800} heightSm={300} />
             </Box>
         </Box>
     );

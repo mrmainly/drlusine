@@ -5,7 +5,7 @@ import { Box } from "@mui/material";
 import StartScreen from "./components/StartScreen";
 import SecondScreen from "./components/SecondScreen";
 // import ThreeScreen from "./components/ThreeScreen";
-import { ThreeScreen } from "../../components";
+import { ThreeScreen, ResultsSlider, Text } from "../../components";
 import FourScreen from "./components/FourScreen";
 
 const Liposuction = () => {
@@ -107,6 +107,17 @@ const Liposuction = () => {
         },
     ];
 
+    const resultsData = [
+        "IMG_3925",
+        "IMG_3949",
+        "IMG_3956",
+        "IMG_3982",
+        "IMG_4015",
+        "IMG_4024",
+        "IMG_4027",
+        "IMG_4031",
+    ];
+
     return (
         <Box>
             <StartScreen />
@@ -141,6 +152,12 @@ const Liposuction = () => {
                 type="delete"
             />
             <FourScreen />
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} height={800} heightSm={300} />
+            </Box>
         </Box>
     );
 };

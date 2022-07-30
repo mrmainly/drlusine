@@ -45,7 +45,14 @@ const Cosmetology = () => {
         },
     ];
 
-    const resultsData = ["IMG_5592", "IMG_7754", "IMG_7956", "IMG_8080"];
+    const resultsData = [
+        "IMG_5592",
+        "IMG_77542",
+        "IMG_7956",
+        "IMG_8080",
+        "IMG_4009",
+        "image170",
+    ];
 
     return (
         <Box>

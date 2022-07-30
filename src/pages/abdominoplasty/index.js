@@ -46,6 +46,8 @@ const Abdominoplasty = () => {
         },
     ];
 
+    const resultsData = ["IMG_3951"];
+
     return (
         <Box>
             <StartScreen
@@ -64,6 +66,15 @@ const Abdominoplasty = () => {
                 title="Абдоминопластика"
                 img="/img/Rectangle2.png"
             />
+            <Box sx={{ mt: 7 }}>
+                <Text
+                    sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}
+                    sm={24}
+                >
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} />
+            </Box>
         </Box>
     );
 };

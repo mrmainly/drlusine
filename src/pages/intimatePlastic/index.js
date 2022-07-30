@@ -33,7 +33,7 @@ const IntimatePlastic = () => {
         },
     ];
 
-    const resultsData = ["IMG_3864"];
+    const resultsData = ["IMG_3864", "IMG_3940"];
 
     return (
         <Box>
