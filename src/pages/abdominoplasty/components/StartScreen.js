@@ -24,6 +24,10 @@ const Img = styled("img")(({ theme }) => ({
 const GridText = styled(Grid)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
+    paddingTop: 110,
+    [theme.breakpoints.down("lg")]: {
+        paddingTop: 80,
+    },
     [theme.breakpoints.down("md")]: {
         display: "none",
     },
@@ -39,33 +43,29 @@ const BoxMobile = styled(Container)(({ theme }) => ({
     },
 }));
 
-const StartScreen = () => {
+const StartScreen = ({ title, text, img }) => {
     return (
         <>
             <Root wrapper={true} minHeight={475}>
                 <Grid container sx={{ mb: "-4px" }}>
                     <GridText item xl={7} lg={7} md={7} sm={7}>
-                        <Box sx={{ mt: 14 }}>
-                            <Text sx={{ fontSize: 60 }} lg={50}>
-                                Блефаропластика
+                        <Box>
+                            <Text sx={{ fontSize: 48 }} lg={40}>
+                                {title}
                             </Text>
-                            <Text sx={{ fontSize: 32 }} lg={25}>
-                                Блефаропластика – это оперативное вмешательство,
-                                корректирующее разрез глаз, размер и форму век.
+                            <Text sx={{ fontSize: 20 }} lg={16}>
+                                {text}
                             </Text>
                         </Box>
                     </GridText>
                     <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
-                        <Img src="/img/123123123.png" />
+                        <Img src={img} />
                     </Grid>
                 </Grid>
             </Root>
             <BoxMobile>
-                <Text sx={{ fontSize: 28 }}> Блефаропластика</Text>
-                <Text sx={{ fontSize: 24, mt: 1 }}>
-                    Блефаропластика – это оперативное вмешательство,
-                    корректирующее разрез глаз, размер и форму век.
-                </Text>
+                <Text sx={{ fontSize: 28 }}>{title}</Text>
+                <Text sx={{ fontSize: 24, mt: 1 }}>{text}</Text>
             </BoxMobile>
         </>
     );

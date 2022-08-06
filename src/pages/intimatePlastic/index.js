@@ -33,7 +33,14 @@ const IntimatePlastic = () => {
         },
     ];
 
-    const resultsData = ["IMG_3864", "IMG_3940"];
+    const resultsData = [
+        "IMG_3864",
+        "IMG_3940",
+        "IMG_4226",
+        "IMG_4225",
+        "IMG_4224",
+        "IMG_4223",
+    ];
 
     return (
         <Box>
@@ -48,7 +55,11 @@ const IntimatePlastic = () => {
                 <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
                     Результаты
                 </Text>
-                <ResultsSlider data={resultsData} />
+                <ResultsSlider
+                    data={resultsData}
+                    height={1000}
+                    heightSm={300}
+                />
             </Box>
         </Box>
     );

@@ -7,11 +7,11 @@ import { useLocation } from "react-router-dom";
 import {
     Container,
     Text,
-    StartScreen,
     SecondScreen,
     ThreeScreen,
     ResultsSlider,
 } from "../../components";
+import StartScreen from "./components/StartScreen";
 
 const Abdominoplasty = () => {
     const location = useLocation();
@@ -46,12 +46,14 @@ const Abdominoplasty = () => {
         },
     ];
 
-    const resultsData = ["IMG_3951"];
+    const resultsData = ["IMG_3951", "IMG_4256"];
 
     return (
         <Box>
             <StartScreen
-                text="Пластическая операция для подтяжки и коррекции формы живота"
+                text="Абдоминопластика (пластика живота) – это операция по удалению излишков кожи. Эта операция позволяющая добиться: - Укрепления мышечного каркаса брюшной стенки; 
+                -Устранения так называемого кожно-жирового «фартука»; 
+                -Улучшения и подтяжки состояния кожи; Устранения дряблость кожи, растяжек (стрий), грыж."
                 title="Абдоминопластика"
                 img="/img/533654-11.png"
             />

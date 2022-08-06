@@ -55,6 +55,14 @@ const ArrowPrevItem = styled(Box)(({ theme }) => ({
     },
 }));
 
+const BackgroundResult = styled(Box)(({ theme }) => ({
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    width: "100%",
+    height: 800,
+}));
+
 const Root = styled(Container)(({ theme }) => ({
     marginTop: 78,
     [theme.breakpoints.down("sm")]: {
@@ -122,14 +130,16 @@ const ResultsSlider = ({ data, height, heightSm }) => {
             <Slider {...settings}>
                 {data
                     ? data.map((item, index) => (
-                          <Box key={index}>
-                              <Img src={`/img/${item}.png`} />
-                          </Box>
+                          <BackgroundResult
+                              key={index}
+                              sx={{ backgroundImage: `url(/img/${item}.png)` }}
+                          />
                       ))
                     : resultsData.map((item, index) => (
-                          <Box key={index}>
-                              <Img src={`/img/${item}.png`} />
-                          </Box>
+                          <BackgroundResult
+                              key={index}
+                              sx={{ backgroundImage: `url(/img/${item}.png)` }}
+                          />
                       ))}
             </Slider>
         </Root>

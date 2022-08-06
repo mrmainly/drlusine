@@ -49,9 +49,11 @@ const Cosmetology = () => {
         "IMG_5592",
         "IMG_77542",
         "IMG_7956",
-        "IMG_8080",
         "IMG_4009",
         "image170",
+        "IMG_4236",
+        "IMG_4242",
+        "IMG_4235",
     ];
 
     return (
@@ -63,6 +65,12 @@ const Cosmetology = () => {
                 title="Косметология"
                 data={data}
             />
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} height={800} heightSm={300} />
+            </Box>
             <Box sx={{ mt: 7 }}>
                 <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
                     Результаты

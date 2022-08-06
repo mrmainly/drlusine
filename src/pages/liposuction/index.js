@@ -116,6 +116,7 @@ const Liposuction = () => {
         "IMG_4024",
         "IMG_4027",
         "IMG_4031",
+        "IMG_4256",
     ];
 
     return (

@@ -5,7 +5,7 @@ import { Header, Footer } from "../components";
 
 const Layout = () => {
     return (
-        <div style={{ backgroundColor: "#F7F7F7" }}>
+        <div style={{ backgroundColor: "#F7F7F7", overflow: "hidden" }}>
             <Header />
             <Outlet />
             <Footer />
