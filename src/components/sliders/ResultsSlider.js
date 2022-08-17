@@ -61,6 +61,9 @@ const BackgroundResult = styled(Box)(({ theme }) => ({
     backgroundPosition: "center",
     width: "100%",
     height: 800,
+    [theme.breakpoints.down("sm")]: {
+        height: 300,
+    },
 }));
 
 const Root = styled(Container)(({ theme }) => ({

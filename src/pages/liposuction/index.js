@@ -107,17 +107,15 @@ const Liposuction = () => {
         },
     ];
 
-    const resultsData = [
-        "IMG_3925",
-        "IMG_3949",
-        "IMG_3956",
-        "IMG_3982",
-        "IMG_4015",
-        "IMG_4024",
-        "IMG_4027",
-        "IMG_4031",
-        "IMG_4256",
-    ];
+    const resultsData = ["IMG_3925", "IMG_3982", "IMG_4015", "IMG_4256"];
+
+    const stomach = ["IMG_3949", "IMG_3581"];
+
+    const LiposuctionPodborodok = ["IMG_4024", "IMG_3950"];
+
+    const LiposuctionLipofiling = ["IMG_3956", "IMG_4027"];
+
+    const SportLine = ["IMG_4031"];
 
     return (
         <Box>
@@ -158,6 +156,38 @@ const Liposuction = () => {
                     Результаты
                 </Text>
                 <ResultsSlider data={resultsData} height={800} heightSm={300} />
+            </Box>
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Липосакция живота и боков
+                </Text>
+                <ResultsSlider data={stomach} height={800} heightSm={300} />
+            </Box>
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Липосакция подбородка
+                </Text>
+                <ResultsSlider
+                    data={LiposuctionPodborodok}
+                    height={800}
+                    heightSm={300}
+                />
+            </Box>
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Липосакция и липофилинг
+                </Text>
+                <ResultsSlider
+                    data={LiposuctionLipofiling}
+                    height={800}
+                    heightSm={300}
+                />
+            </Box>
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Липосакция живота, боков и спины, спортивные линии пресса
+                </Text>
+                <ResultsSlider data={SportLine} height={800} heightSm={300} />
             </Box>
         </Box>
     );

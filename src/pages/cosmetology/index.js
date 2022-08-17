@@ -51,10 +51,11 @@ const Cosmetology = () => {
         "IMG_7956",
         "IMG_4009",
         "image170",
-        "IMG_4236",
-        "IMG_4242",
-        "IMG_4235",
     ];
+
+    const rinoData = ["IMG_4236", "IMG_4242", "IMG_4235"];
+
+    const gubi = ["IMG_4241"];
 
     return (
         <Box>
@@ -67,15 +68,21 @@ const Cosmetology = () => {
             />
             <Box sx={{ mt: 7 }}>
                 <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
-                    Результаты
+                    Результаты косметологии
                 </Text>
                 <ResultsSlider data={resultsData} height={800} heightSm={300} />
             </Box>
             <Box sx={{ mt: 7 }}>
                 <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
-                    Результаты
+                    безоперационная ринопластика
                 </Text>
-                <ResultsSlider data={resultsData} height={800} heightSm={300} />
+                <ResultsSlider data={rinoData} height={800} heightSm={300} />
+            </Box>
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Носослезная борозда и золоте сечение
+                </Text>
+                <ResultsSlider data={gubi} height={800} heightSm={300} />
             </Box>
         </Box>
     );
