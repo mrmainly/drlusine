@@ -44,7 +44,6 @@ const Cosmetology = () => {
             value: "от 22 тыс. руб",
         },
     ];
-
     const resultsData = [
         "IMG_5592",
         "IMG_77542",
@@ -66,6 +65,12 @@ const Cosmetology = () => {
                 title="Косметология"
                 data={data}
             />
+            <Box sx={{ mt: 7 }}>
+                <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
+                    Результаты
+                </Text>
+                <ResultsSlider data={resultsData} height={800} heightSm={300} />
+            </Box>
             <Box sx={{ mt: 7 }}>
                 <Text sx={{ fontSize: 42, textAlign: "center", mb: "-30px" }}>
                     Результаты косметологии
