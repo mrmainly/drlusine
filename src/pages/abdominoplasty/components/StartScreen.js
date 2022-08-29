@@ -24,7 +24,10 @@ const Img = styled("img")(({ theme }) => ({
 const GridText = styled(Grid)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
-    paddingTop: 110,
+    paddingTop: 140,
+    [theme.breakpoints.down("xl")]: {
+        paddingTop: 100,
+    },
     [theme.breakpoints.down("lg")]: {
         paddingTop: 80,
     },
@@ -53,8 +56,17 @@ const StartScreen = ({ title, text, img }) => {
                             <Text sx={{ fontSize: 48 }} lg={40}>
                                 {title}
                             </Text>
-                            <Text sx={{ fontSize: 20 }} lg={16}>
-                                {text}
+                            <Text sx={{ fontSize: 18 }} lg={16}>
+                                Абдоминопластика (пластика живота)
+                                <br /> – это операция по удалению излишков кожи.
+                                Эта операция позволяющая добиться:
+                                <br /> - Укрепления мышечного каркаса брюшной
+                                стенки;
+                                <br /> -Устранения так называемого
+                                кожно-жирового «фартука»;
+                                <br /> -Улучшения и подтяжки состояния кожи;
+                                Устранения дряблость кожи, растяжек (стрий),
+                                грыж.
                             </Text>
                         </Box>
                     </GridText>
@@ -65,7 +77,16 @@ const StartScreen = ({ title, text, img }) => {
             </Root>
             <BoxMobile>
                 <Text sx={{ fontSize: 28 }}>{title}</Text>
-                <Text sx={{ fontSize: 24, mt: 1 }}>{text}</Text>
+                <Text sx={{ fontSize: 24, mt: 1 }}>
+                    {" "}
+                    Абдоминопластика (пластика живота)
+                    <br /> – это операция по удалению излишков кожи. Эта
+                    операция позволяющая добиться:
+                    <br /> - Укрепления мышечного каркаса брюшной стенки;
+                    <br /> -Устранения так называемого кожно-жирового «фартука»;
+                    <br /> -Улучшения и подтяжки состояния кожи; Устранения
+                    дряблость кожи, растяжек (стрий), грыж.
+                </Text>
             </BoxMobile>
         </>
     );
