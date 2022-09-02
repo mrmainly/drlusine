@@ -41,6 +41,14 @@ const Img = styled("img")(({ theme }) => ({
   },
 }));
 
+const ImgSkeleton = styled(Box)(({ theme }) => ({
+  height: 465,
+  [theme.breakpoints.down("sm")]: {
+    width: 215,
+    height: 300,
+  },
+}));
+
 const MainGrid = styled(Grid)(({ theme }) => ({
   marginTop: 80,
   [theme.breakpoints.down("sm")]: {
@@ -86,7 +94,10 @@ const ThreeScreen = ({ data, title, img, type }) => {
             position: "relative",
           }}
         >
-          <Img src={img} />
+          {/* loading={<ImgSkeleton></ImgSkeleton>} */}
+          <ImgSkeleton>
+            <Img src={img} />
+          </ImgSkeleton>
           <NavHashLink
             to="/#form-anchor"
             smooth

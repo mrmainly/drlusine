@@ -133,9 +133,8 @@ const ResultsSlider = ({ data, height, heightSm }) => {
       <Slider {...settings}>
         {data
           ? data.map((item, index) => (
-              <Box>
+              <Box key={index}>
                 <BackgroundResult
-                  key={index}
                   sx={{ backgroundImage: `url(/img/${item.img}.png)` }}
                 />
                 <Text variant="h4" sx={{ textAlign: "center", mt: 4 }} sm={20}>

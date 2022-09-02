@@ -28,7 +28,7 @@ const Wrapper = styled(Box)(({ theme }) => ({
     height: 180,
     marginBottom: 100,
   },
-  [theme.breakpoints.down("sm")]: {
+  [theme.breakpoints.down("md")]: {
     marginTop: "-5px",
   },
 }));
@@ -124,8 +124,8 @@ const Header = () => {
   const Links = () => {
     return (
       <BoxLinks>
-        {headerData.map((item) => (
-          <Cuslink to={item.link} key={item.link}>
+        {headerData.map((item, index) => (
+          <Cuslink to={item.link} key={index}>
             <CustomMenuItem onClick={() => setDrawerOpen(false)}>
               <LinkText>{item.text}</LinkText>
             </CustomMenuItem>

@@ -87,6 +87,7 @@ const ThreeScreen = () => {
       title: "Моделирование тела",
       link: ROUTES.BodyModeling,
       type: "right",
+      typeText: "minimal-text",
     },
     {
       bgimg: "Group2458.png",
